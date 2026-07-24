@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
 
 type Field = {
@@ -2895,7 +2896,14 @@ export default function Home() {
           <span className="brand-mark" aria-hidden="true">E</span>
           <span>Econome <small>by Pearling</small></span>
         </a>
-        <p>© All Rights Reserved 2026 · Designed by Pearling.</p>
+        <div className="footer-center">
+          <p>© All Rights Reserved 2026 · Designed by Pearling.</p>
+          <nav className="footer-links" aria-label="Legal information">
+            <Link href="/privacy">Privacy</Link>
+            <Link href="/terms">Terms</Link>
+            <Link href="/disclaimer">Disclaimer</Link>
+          </nav>
+        </div>
         <a href="#top">Back to top ↑</a>
       </footer>
     </main>
